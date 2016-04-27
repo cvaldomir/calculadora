@@ -1,0 +1,2 @@
+class Unary
+end
