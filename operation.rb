@@ -1,4 +1,3 @@
-require_relative "BinaryOperation"
-
-class Operation < BinaryOperation
+class Operation 
+attr_accessor :result
 end
