@@ -1,10 +1,10 @@
-require_relative "Sum"
-require_relative "Difference"
-require_relative "Multiplication"
-require_relative "Division"
-require_relative "Inverse"
-require_relative "Square"
-require_relative "SquareRoot"
+require_relative "operations/Sum"
+require_relative "operations/Difference"
+require_relative "operations/Multiplication"
+require_relative "operations/Division"
+require_relative "operations/Inverse"
+require_relative "operations/Square"
+require_relative "operations/SquareRoot"
 
 class Calculator
 
@@ -12,8 +12,11 @@ class Calculator
        @operand_temp = operand 
 
 
-       if @current_operation.nil? @operand_temp = op 
-       else @current_operation = add_operand(op)    
+       if @current_operation.nil? 
+            @operand_temp = operand 
+       else 
+        @current_operation.add_operand(operand)  
+       end  
 	end	 
 
 	def set_operation(operation)
